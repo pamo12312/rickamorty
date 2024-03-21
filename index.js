@@ -71,6 +71,6 @@ document.querySelectorAll('input[name="status"]').forEach(input => {
         applyFilter();
     });
 });
-document.getElementById('previousPageBtn').addEventListener('click', previousPage);
-document.getElementById('nextPageBtn').addEventListener('click', nextPage);
+document.getElementById('prevbtn').addEventListener('click', previousPage);
+document.getElementById('nextbtn').addEventListener('click', nextPage);
 displayData();
