@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="module" src="index.js"></script>
+</head>
+<body>
+<div class="filter-container">
+    <div>Status:</div>
+    <div class="radio-container">
+        <div>
+            <input type="radio" id="aliveRadio" name="status" value="alive">
+            <label for="aliveRadio">Alive</label>
+        </div>
+        <div>
+            <input type="radio" id="deadRadio" name="status" value="dead">
+            <label for="deadRadio">Dead</label>
+        </div>
+        <div>
+            <input type="radio" id="unknownRadio" name="status" value="unknown">
+            <label for="unknownRadio">Unknown</label>
+        </div>
+    </div>
+</div>
+
+<div class="cards-container" id="cardsContainer"></div>
+
+<div class="button-container">
+    <button id="previousPageBtn">Previous</button>
+    <button id="nextPageBtn">Next</button>
+</div>
+</body>
+</html>
