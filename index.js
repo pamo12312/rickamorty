@@ -36,17 +36,20 @@ async function displayData() {
         const data = await getData();
         console.log(data);
         const container = document.getElementById('cardsContainer');
-        container.innerHTML = '';
+        while (container.firstChild) {
+            container.removeChild(container.firstChild);
+        }
+
         data.results.forEach(result => {
             const characterInfo = document.createElement('div');
             characterInfo.className = 'card';
             const textColumn = document.createElement('div');
             textColumn.className = 'textColumn';
-            const name = document.createElement('p');
+            const name = document.createElement('div');
             name.textContent = 'Name: ' + result.name;
-            const status = document.createElement('p');
+            const status = document.createElement('div');
             status.textContent = 'Status: ' + result.status;
-            const type = document.createElement('p');
+            const type = document.createElement('div');
             type.textContent = 'Type: ' + result.type;
             textColumn.appendChild(name);
             textColumn.appendChild(status);
